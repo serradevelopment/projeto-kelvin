@@ -33,3 +33,7 @@ Route::get('/empresa', function () {
 Route::get('/professor', function () {
     return view('professor');
 });
+
+Route::get('/cadastro-empresa', function () {
+    return view('cadastro-empresa');
+});
