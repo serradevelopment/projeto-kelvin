@@ -187,66 +187,67 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form action="{{route('empresas.register')}}" method="post" autocomplete="off">
+                  @csrf
                 <div class="card-body">
                   <div class="row email-and-password">
                   <div class="form-group col-lg-12">
                       <label for="exampleInputEmail1">Razão Social</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      <input type="text" name="razao_social" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                     </div>
                     <div class="form-group col-lg-8">
                       <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                     </div>
                     <div class="form-group col-lg-4">
                       <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                     </div>
                   </div>
                   <div class="row adress">
                     <div class="form-group col-lg-8">
                       <label for="exampleInputEmail1">Endereço</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      <input type="text" name="endereco" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                     </div>
                     <div class="form-group col-lg-4">
                       <label for="exampleInputPassword1">Bairro</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      <input type="text" name="bairro" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                     </div>
                     <div class="form-group col-lg-5">
                       <label for="exampleInputEmail1">CEP</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      <input type="text" name="cep" class="form-control" id="cep" placeholder="Enter email">
                     </div>
                     <div class="form-group col-lg-5">
                       <label for="exampleInputPassword1">Cidade</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      <input type="text" name="cidade" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                     </div>
                     <div class="form-group col-lg-2">
                       <label for="exampleInputPassword1">UF</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      <input type="text" maxlength="2" name="uf" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                     </div>
                   </div>
                   <div class="row adress-company">
                     <div class="form-group col-lg-4">
                       <label for="exampleInputEmail1">Telefone</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      <input type="text" name="telefone" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                     </div>
                     <div class="form-group col-lg-4">
                       <label for="exampleInputEmail1">CNPJ</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      <input type="text" name="cnpj" class="form-control" id="cnpj" placeholder="Enter email">
                     </div>
                     <div class="form-group col-lg-4">
                       <label for="exampleInputEmail1">Insc. Estadual</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      <input type="text" name="inscricao_estadual" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                     </div>
                   </div>
                   <div class="row representant">
                     <div class="form-group col-lg-6">
                       <label for="exampleInputPassword1">Representante Empresa</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      <input type="text" name="representante_empresa" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                     </div>
                     <div class="form-group col-lg-6">
                       <label for="exampleInputPassword1">Cargo</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      <input type="text" name="cargo" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                     </div>
                   </div>
                 </div>
@@ -291,6 +292,11 @@
 $(function () {
   bsCustomFileInput.init();
 });
+</script>
+<script src="js/jquery.mask.min.js"></script>
+<script>
+    $('#cnpj').mask("99.999.999/9999-99");
+    $('#cep').mask('00000-000', {reverse: true});
 </script>
 </body>
 </html>

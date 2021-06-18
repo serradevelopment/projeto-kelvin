@@ -22,10 +22,11 @@
     </div>
     <div class="card-body">
 
-      <form action="../../index.html" method="post">
+      <form action="{{route('professores.register')}}" method="post">
+          @csrf
         <div class="row email-and-password">
           <div class="input-group mb-3 col-lg-6">
-            <input type="email" class="form-control" placeholder="Email">
+            <input type="email" name="email" class="form-control" placeholder="Email">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-envelope"></span>
@@ -33,7 +34,7 @@
             </div>
           </div>
           <div class="input-group mb-3 col-lg-3">
-            <input type="password" class="form-control" placeholder="Senha">
+            <input type="password" name="password" class="form-control" placeholder="Senha">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
@@ -41,7 +42,7 @@
             </div>
           </div>
           <div class="input-group mb-3 col-lg-3">
-            <input type="password" class="form-control" placeholder="Repetir Senha">
+            <input type="password" name="password_confirm" class="form-control" placeholder="Repetir Senha">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
@@ -51,7 +52,7 @@
         </div>
         <div class="row cargo-professor">
           <div class="input-group mb-3 col-8">
-            <input type="text" class="form-control" placeholder="Nome Completo">
+            <input type="text" name="nome" class="form-control" placeholder="Nome Completo">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-user"></span>
@@ -59,34 +60,15 @@
             </div>
           </div>
           <div class="input-group mb-3 col-4">
-            <input type="text" class="form-control" placeholder="Cargo">
+            <input type="text" name="cargo" class="form-control" placeholder="Cargo">
           </div>
         </div>
-        <div class="row address-estagiario">
-          <div class="input-group mb-3 col-lg-8">
-            <input type="text" class="form-control" placeholder="Endereço">
-          </div>
-          <div class="input-group mb-3 col-lg-4">
-            <input type="text" class="form-control" placeholder="Bairro">
-          </div>
-          <div class="input-group mb-3 col-lg-4">
-            <input type="text" class="form-control" placeholder="CEP">
-          </div>
-          <div class="input-group mb-3 col-lg-3">
-            <input type="text" class="form-control" placeholder="Cidade">
-          </div>
-          <div class="input-group mb-3 col-lg-3">
-            <input type="text" class="form-control" placeholder="Telefone">
-          </div>
-          <div class="input-group mb-3 col-lg-2">
-            <input type="text" class="form-control" placeholder="UF">
-          </div>
-        </div>
+
         <div class="row">
           <div class="col-3">
           </div>
           <div class="col-6">
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
+            <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
           </div>
           <div class="col-3">
           </div>
