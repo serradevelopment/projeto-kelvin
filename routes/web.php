@@ -17,7 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::get('/coordenacao', function () {
     return view('coordenador');
 });
@@ -36,4 +35,32 @@ Route::get('/professor', function () {
 
 Route::get('/cadastro-empresa', function () {
     return view('cadastro-empresa');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/register-professor', function () {
+    return view('register-professor');
+});
+
+Route::get('/register-estagiario', function () {
+    return view('register-estagiario');
+});
+
+Route::get('/estagios', function () {
+    return view('estagios');
+});
+
+Route::get('/cadastrar-tarefas', function () {
+    return view('cadastro-de-tarefas');
+});
+
+Route::get('/tarefas', function () {
+    return view('tarefas');
+});
+
+Route::get('/detalhes-do-estagio', function () {
+    return view('detalhes-do-estagio');
 });
