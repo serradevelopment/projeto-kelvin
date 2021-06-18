@@ -13,12 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+//COORDENADOR
+Route::get('/coordenador/login','Coordenador\Auth\LoginController@showLoginForm')->name('coordenadores.auth.login');
+Route::get('/coordenador/register','Coordenador\Auth\LoginController@showRegisterForm')->name('coordenadores.auth.register');
+Route::post('/coordenador/login','Coordenador\Auth\LoginController@login')->name('coordenadores.login');
+Route::post('/coordenador/register','Coordenador\Auth\LoginController@register')->name('coordenadores.register');
+
+Route::middleware('coordenadores')->namespace('Coordenador')->prefix('coordenador')->group(function(){
+    Route::get('/', 'HomeController@home')->name('coordenador.home');
 });
 
-Route::get('/coordenacao', function () {
-    return view('coordenador');
+
+
+Route::get('/add', function () {
+    return view('add');
 });
 
 Route::get('/estagiario', function () {
@@ -33,21 +43,21 @@ Route::get('/professor', function () {
     return view('professor');
 });
 
-Route::get('/cadastro-empresa', function () {
-    return view('cadastro-empresa');
-});
+//EMPRESA
+Route::get('/cadastro-empresa', 'EmpresasController@registerForm');
+Route::post('/cadastro-empresa', 'EmpresasController@register')->name('empresas.register');
 
 Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/register-professor', function () {
-    return view('register-professor');
-});
+//PROFESSOR
+Route::get('/register-professor', 'ProfessoresController@registerForm');
+Route::post('/register-professor', 'ProfessoresController@register')->name('professores.register');
 
-Route::get('/register-estagiario', function () {
-    return view('register-estagiario');
-});
+//ESTAGIARIO
+Route::get('/register-estagiario', 'EstagiariosController@registerForm')->name('estagiarios.registerForm');
+Route::post('/register-estagiario', 'EstagiariosController@register')->name('estagiarios.register');
 
 Route::get('/estagios', function () {
     return view('estagios');

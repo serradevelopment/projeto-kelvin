@@ -14,8 +14,8 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
-        'passwords' => 'users',
+        'guard' => 'coordenador',
+        'passwords' => 'coordenadores',
     ],
 
     /*
@@ -36,9 +36,9 @@ return [
     */
 
     'guards' => [
-        'web' => [
+        'coordenador' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'coordenadores',
         ],
 
         'api' => [
@@ -66,15 +66,15 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'coordenadores' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => App\Models\Coordenador::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+         'empresas' => [
+             'driver' => 'database',
+             'model' => App\Models\Empresa::class,
+         ],
     ],
 
     /*
@@ -93,12 +93,12 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
-            'table' => 'password_resets',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
+//        'users' => [
+//            'provider' => 'users',
+//            'table' => 'password_resets',
+//            'expire' => 60,
+//            'throttle' => 60,
+//        ],
     ],
 
     /*
