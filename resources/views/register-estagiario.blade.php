@@ -111,10 +111,8 @@
       </form>
       <a href="/login" class="text-center">Realizar Login</a>
     </div>
-    <!-- /.form-box -->
-  </div><!-- /.card -->
+  </div>
 </div>
-<!-- /.register-box -->
 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
