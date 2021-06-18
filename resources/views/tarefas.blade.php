@@ -69,6 +69,7 @@
             { name: "Atividade", type: "text", width: 150 },
             { name: "Descrição", type: "text", width: 200 },
             { name: "Data", type: "number", width: 50 },
+            { name: "Horas", type: "number", width: 30 },
             { name: "Empresa", type: "checkbox", title: "Aluno" },
             { name: "Empresa", type: "checkbox", title: "Empresa" },
             { name: "Professor", type: "checkbox", title: "Professor" }

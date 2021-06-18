@@ -1,7 +1,7 @@
 @include('layouts.main')
 <!-- Site wrapper -->
 <div class="wrapper">
-  
+
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
@@ -20,7 +20,7 @@
     </section>
 
     <!-- Main content -->
-    <section class="content" style="max-width: 1300px;">
+    <section class="content" style="max-width: 1500px;">
 
       <!-- Default box -->
       <div class="card">
@@ -74,17 +74,17 @@
                           <a class="btn btn-primary btn-sm" href="tarefas">
                               <i class="fas fa-folder">
                               </i>
-                              View
+                              Tarefas
                           </a>
-                          <a class="btn btn-info btn-sm" href="#">
+                          <a class="btn btn-info btn-sm" href="/detalhes-do-estagio">
                               <i class="fas fa-pencil-alt">
                               </i>
-                              Edit
+                              Detalhes
                           </a>
                           <a class="btn btn-danger btn-sm" href="#">
                               <i class="fas fa-trash">
                               </i>
-                              Delete
+                              Deletar
                           </a>
                       </td>
                   </tr>

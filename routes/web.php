@@ -28,7 +28,7 @@ Route::middleware('coordenadores')->namespace('Coordenador')->prefix('coordenado
 
 
 Route::get('/add', function () {
-    return view('add');
+    return view('coordenadores.estagios.create');
 });
 
 Route::get('/estagiario', function () {

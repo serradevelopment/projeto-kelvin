@@ -38,6 +38,10 @@
                     <label for="exampleInputPassword1">Data</label>
                     <input type="date" name="data" class="form-control" id="exampleInputEmail1">
                   </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Quantidade de Horas</label>
+                        <input type="text" name="nome" class="form-control" id="exampleInputEmail1" placeholder="Horas">
+                    </div>
                   <!--div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">

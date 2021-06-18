@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Project Detail</h1>
+            <h1>Detalhes do Estágio</h1>
           </div>
       </div><!-- /.container-fluid -->
     </section>
@@ -16,7 +16,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Projects Detail</h3>
+          <h3 class="card-title">Detalhes do Estágio</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -34,7 +34,7 @@
                 <div class="col-4 col-sm-4">
                   <div class="info-box bg-light">
                     <div class="info-box-content">
-                      <span class="info-box-text text-center text-muted">Quantida de Horas</span>
+                      <span class="info-box-text text-center text-muted">Quantidade de Horas</span>
                       <span class="info-box-number text-center text-muted mb-0">2300</span>
                     </div>
                   </div>
