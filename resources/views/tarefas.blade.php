@@ -1,13 +1,5 @@
 @include('layouts.main')
 <div class="wrapper">
-  <!-- Navbar -->
-
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  
-
-  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -20,10 +12,8 @@
             <a href="/cadastrar-tarefas"><button class="btn-success">Cadastrar Tarefa</button></a>
           </div>
         </div>
-      </div><!-- /.container-fluid -->
+      </div>
     </section>
-
-    <!-- Main content -->
     <section class="content">
       <div class="card">
         <!-- /.card-header -->
