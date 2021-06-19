@@ -23,45 +23,52 @@ Route::post('/coordenador/register','Coordenador\Auth\LoginController@register')
 
 Route::middleware('coordenadores')->namespace('Coordenador')->prefix('coordenador')->group(function(){
     Route::get('/', 'HomeController@home')->name('coordenador.home');
+    Route::get('/estagios/create','EstagiosController@create' )->name('coordenador.estagios.create');
+    Route::get('/estagios/','EstagiosController@index' )->name('coordenador.estagios.index');
+    Route::get('/estagios/{estagio}','EstagiosController@show' )->name('coordenador.estagios.show');
+    Route::get('/estagios/{estagio}/tarefas/create','TarefasController@create' )->name('coordenador.estagios.tarefas.create');
+    Route::post('/estagios/{estagio}/tarefas/store','TarefasController@store' )->name('coordenador.estagios.tarefas.store');
+    Route::get('/estagios/{estagio}/tarefas/','TarefasController@index' )->name('coordenador.estagios.tarefas.index');
+    Route::post('/estagios/store','EstagiosController@store' )->name('coordenador.estagios.store');
+    Route::get('/empresas/create','EmpresasController@registerForm' )->name('coordenador.empresas.create');
+    Route::post('/empresas/store','EmpresasController@store' )->name('coordenador.empresas.store');
 });
 
 
 
-Route::get('/add', function () {
-    return view('coordenadores.estagios.create');
-});
+//ESTAGIARIO
+Route::get('/estagiario/login','Estagiario\Auth\LoginController@showLoginForm')->name('estagiarios.auth.login');
+Route::get('/estagiario/register','Estagiario\Auth\LoginController@showRegisterForm')->name('estagiarios.auth.register');
+Route::post('/estagiario/login','Estagiario\Auth\LoginController@login')->name('estagiarios.login');
+Route::post('/estagiario/register','Estagiario\Auth\LoginController@register')->name('estagiarios.register');
 
-Route::get('/estagiario', function () {
-    return view('estagiario');
-});
-
-Route::get('/empresa', function () {
-    return view('empresa');
-});
-
-Route::get('/professor', function () {
-    return view('professor');
+Route::middleware('estagiarios')->namespace('Estagiario')->prefix('estagiario')->group(function(){
+    Route::get('/', 'HomeController@home')->name('estagiario.home');
+    Route::get('/estagios', 'EstagiosController@index')->name('estagiario.estagios.index');
 });
 
 //EMPRESA
-Route::get('/cadastro-empresa', 'EmpresasController@registerForm');
-Route::post('/cadastro-empresa', 'EmpresasController@register')->name('empresas.register');
+Route::get('/empresa/login','Empresa\Auth\LoginController@showLoginForm')->name('empresas.auth.login');
+Route::post('/empresa/login','Empresa\Auth\LoginController@login')->name('empresas.login');
 
-Route::get('/login', function () {
-    return view('login');
+Route::middleware('empresas')->namespace('Empresa')->prefix('empresa')->group(function(){
+    Route::get('/', 'HomeController@home')->name('empresa.home');
+    Route::get('/estagios', 'EstagiosController@index')->name('empresa.estagios.index');
 });
 
 //PROFESSOR
-Route::get('/register-professor', 'ProfessoresController@registerForm');
-Route::post('/register-professor', 'ProfessoresController@register')->name('professores.register');
+Route::get('/professor/login','Professor\Auth\LoginController@showLoginForm')->name('professores.auth.login');
+Route::post('/professor/login','Professor\Auth\LoginController@login')->name('professores.login');
+Route::get('/professor/register','Professor\Auth\LoginController@showRegisterForm')->name('professores.auth.register');
+Route::post('/professor/register','Professor\Auth\LoginController@register')->name('professores.register');
 
-//ESTAGIARIO
-Route::get('/register-estagiario', 'EstagiariosController@registerForm')->name('estagiarios.registerForm');
-Route::post('/register-estagiario', 'EstagiariosController@register')->name('estagiarios.register');
-
-Route::get('/estagios', function () {
-    return view('estagios');
+Route::middleware('professores')->namespace('Professor')->prefix('professor')->group(function(){
+    Route::get('/', 'HomeController@home')->name('professor.home');
+    Route::get('/estagios', 'EstagiosController@index')->name('professor.estagios.index');
 });
+
+
+
 
 Route::get('/cadastrar-tarefas', function () {
     return view('cadastro-de-tarefas');

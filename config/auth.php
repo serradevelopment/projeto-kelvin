@@ -13,10 +13,6 @@ return [
     |
     */
 
-    'defaults' => [
-        'guard' => 'coordenador',
-        'passwords' => 'coordenadores',
-    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -39,6 +35,20 @@ return [
         'coordenador' => [
             'driver' => 'session',
             'provider' => 'coordenadores',
+        ],
+
+        'estagiario' => [
+            'driver' => 'session',
+            'provider' => 'estagiarios',
+        ],
+
+        'empresa' => [
+            'driver' => 'session',
+            'provider' => 'empresas',
+        ],
+        'professor' => [
+            'driver' => 'session',
+            'provider' => 'professores',
         ],
 
         'api' => [
@@ -71,10 +81,19 @@ return [
             'model' => App\Models\Coordenador::class,
         ],
 
+        'estagiarios' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Estagiario::class,
+        ],
+
          'empresas' => [
-             'driver' => 'database',
+             'driver' => 'eloquent',
              'model' => App\Models\Empresa::class,
          ],
+        'professores' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Professor::class,
+        ],
     ],
 
     /*

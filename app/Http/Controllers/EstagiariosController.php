@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 class EstagiariosController extends Controller
 {
     public function registerForm(){
-        return view('register-estagiario');
+        return view('estagiarios.register-estagiario');
     }
     public function register(Request $request){
         $data = $request->all();

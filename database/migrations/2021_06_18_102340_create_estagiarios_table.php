@@ -16,7 +16,7 @@ class CreateEstagiariosTable extends Migration
         Schema::create('estagiarios', function (Blueprint $table) {
             $table->id();
             $table->string('email')->unique();
-            $table->string('senha');
+            $table->string('password');
             $table->string('nome');
             $table->string('periodo');
             $table->string('curso');

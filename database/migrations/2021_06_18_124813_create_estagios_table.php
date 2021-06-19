@@ -18,6 +18,7 @@ class CreateEstagiosTable extends Migration
             $table->string('nome');
             $table->string('descricao');
             $table->integer('status');
+            $table->integer('qtd_horas');
             $table->unsignedBigInteger('empresa_id');
             $table->unsignedBigInteger('professor_id');
             $table->unsignedBigInteger('estagiario_id');
