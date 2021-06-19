@@ -81,3 +81,7 @@ Route::get('/tarefas', function () {
 Route::get('/detalhes-do-estagio', function () {
     return view('detalhes-do-estagio');
 });
+
+Route::get('/pdf', function () {
+    return view('pdf.termo');
+});
