@@ -94,7 +94,7 @@
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">
-        <strong>Copyright &copy; 2021 <a href="#">Grupo 04</a>.</strong>
+        <strong>Copyright &copy; 2021 <a href="#">Trabalho Sabado</a>.</strong>
     </footer>
 
     <!-- Control Sidebar -->

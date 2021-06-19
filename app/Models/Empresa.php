@@ -22,7 +22,7 @@ class Empresa extends Authenticatable
         $tarefas_pendentes = [];
         foreach($estagios as $estagio){
             foreach($estagio->tarefas as $tarefa){
-                if($tarefa->empresa_ok === 0){
+                if($tarefa->empresa_ok === 0 || $tarefa->professor_ok === 0 || $tarefa->estagiario_ok === 0 ) {
                     $tarefas_pendentes[] = $tarefa;
                 }
             }

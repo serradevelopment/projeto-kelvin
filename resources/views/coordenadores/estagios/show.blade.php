@@ -53,23 +53,7 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <h5 class="text-muted">Termo</h5>
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Functional-requirements.docx</a>
-                                            </li>
-                                            <li>
-                                                <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-pdf"></i> UAT.pdf</a>
-                                            </li>
-                                            <li>
-                                                <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-envelope"></i> Email-from-flatbal.mln</a>
-                                            </li>
-                                            <li>
-                                                <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-image "></i> Logo.png</a>
-                                            </li>
-                                            <li>
-                                                <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Contract-10_12_2014.docx</a>
-                                            </li>
-                                        </ul>
+
                                     </div>
                                 </div>
                             </div>
@@ -84,12 +68,6 @@
         </div>
         <!-- /.content-wrapper -->
 
-        <footer class="main-footer">
-            <div class="float-right d-none d-sm-block">
-                <b>Version</b> 3.1.0
-            </div>
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-        </footer>
 
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">

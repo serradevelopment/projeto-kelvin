@@ -63,10 +63,10 @@ class EstagiosController extends Controller
      */
     public function show(Estagio $estagio)
     {
-        $data = [];
-        $pdf = \PDF::loadView('pdf.termo', $data);
-        $pdf->setOptions(['isRemoteEnabled' => false ,'isJavascriptEnabled'=>false]);
-        return $pdf->stream();
+//        $data = [];
+//        $pdf = \PDF::loadView('pdf.termo', $data);
+//        $pdf->setOptions(['isRemoteEnabled' => false ,'isJavascriptEnabled'=>false]);
+//        return $pdf->stream();
         return view('coordenadores.estagios.show',[
             'estagio'  =>  $estagio
         ]);

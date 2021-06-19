@@ -24,7 +24,7 @@
                             <!-- general form elements -->
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Quick Example</h3>
+                                    <h3 class="card-title">Cadastrar</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
@@ -48,47 +48,47 @@
                                         <div class="row adress">
                                             <div class="form-group col-lg-8">
                                                 <label for="exampleInputEmail1">Endereço</label>
-                                                <input type="text" name="endereco" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                <input type="text" name="endereco" class="form-control" id="exampleInputEmail1" placeholder="Endereco">
                                             </div>
                                             <div class="form-group col-lg-4">
                                                 <label for="exampleInputPassword1">Bairro</label>
-                                                <input type="text" name="bairro" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                <input type="text" name="bairro" class="form-control" id="exampleInputEmail1" placeholder="Bairro">
                                             </div>
                                             <div class="form-group col-lg-5">
                                                 <label for="exampleInputEmail1">CEP</label>
-                                                <input type="text" name="cep" class="form-control" id="cep" placeholder="Enter email">
+                                                <input type="text" name="cep" class="form-control" id="cep" placeholder="CEP">
                                             </div>
                                             <div class="form-group col-lg-5">
                                                 <label for="exampleInputPassword1">Cidade</label>
-                                                <input type="text" name="cidade" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                <input type="text" name="cidade" class="form-control" id="exampleInputEmail1" placeholder="Cidade">
                                             </div>
                                             <div class="form-group col-lg-2">
                                                 <label for="exampleInputPassword1">UF</label>
-                                                <input type="text" maxlength="2" name="uf" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                <input type="text" maxlength="2" name="uf" class="form-control" id="exampleInputEmail1" placeholder="UF">
                                             </div>
                                         </div>
                                         <div class="row adress-company">
                                             <div class="form-group col-lg-4">
                                                 <label for="exampleInputEmail1">Telefone</label>
-                                                <input type="text" name="telefone" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                <input type="text" name="telefone" class="form-control" id="exampleInputEmail1" placeholder="Telefone (00) 00000-0000">
                                             </div>
                                             <div class="form-group col-lg-4">
                                                 <label for="exampleInputEmail1">CNPJ</label>
-                                                <input type="text" name="cnpj" class="form-control" id="cnpj" placeholder="Enter email">
+                                                <input type="text" name="cnpj" class="form-control" id="cnpj" placeholder="CNPJ">
                                             </div>
                                             <div class="form-group col-lg-4">
                                                 <label for="exampleInputEmail1">Insc. Estadual</label>
-                                                <input type="text" name="inscricao_estadual" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                <input type="text" name="inscricao_estadual" class="form-control" id="exampleInputEmail1" placeholder="Inscricao">
                                             </div>
                                         </div>
                                         <div class="row representant">
                                             <div class="form-group col-lg-6">
                                                 <label for="exampleInputPassword1">Representante Empresa</label>
-                                                <input type="text" name="representante_empresa" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                <input type="text" name="representante_empresa" class="form-control" id="exampleInputEmail1" placeholder="Representante>
                                             </div>
                                             <div class="form-group col-lg-6">
                                                 <label for="exampleInputPassword1">Cargo</label>
-                                                <input type="text" name="cargo" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                <input type="text" name="cargo" class="form-control" id="exampleInputEmail1" placeholder="Cargo">
                                             </div>
                                         </div>
                                     </div>

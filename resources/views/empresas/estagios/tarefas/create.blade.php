@@ -1,10 +1,10 @@
 @extends('empresas.layouts.app')
 
 @section('content')
-    <div class="wrapper">
+    <div class="wrapsper">
 
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
+        <div class="contents-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <div class="container-fluid">
@@ -26,7 +26,7 @@
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form  action="{{route('coordenador.estagios.tarefas.store',$estagio)}}" method="post">
+                                <form  action="{{route('empresa.estagios.tarefas.store',$estagio)}}" method="post">
                                     @csrf
                                     <div class="card-body">
                                         <div class="form-group">
@@ -73,12 +73,6 @@
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-        <footer class="main-footer">
-            <div class="float-right d-none d-sm-block">
-                <b>Version</b> 3.1.0
-            </div>
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-        </footer>
 
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">

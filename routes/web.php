@@ -65,6 +65,7 @@ Route::middleware('empresas')->namespace('Empresa')->prefix('empresa')->group(fu
 
     Route::get('/estagios/{estagio}/tarefas/create','TarefasController@create' )->name('empresa.estagios.tarefas.create');
     Route::get('/estagios/{estagio}/tarefas/','TarefasController@index' )->name('empresa.estagios.tarefas.index');
+    Route::post('/estagios/{estagio}/tarefas/','TarefasController@store' )->name('empresa.estagios.tarefas.store');
 });
 
 //PROFESSOR

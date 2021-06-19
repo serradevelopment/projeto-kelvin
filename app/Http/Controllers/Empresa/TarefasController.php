@@ -46,7 +46,7 @@ class TarefasController extends Controller
         $tarefa->estagio_id = $estagio->id;
         $tarefa->save();
 
-        return redirect()->route('coordenador.estagios.tarefas.index',$estagio);
+        return redirect()->route('empresa.estagios.tarefas.index',$estagio);
     }
 
     /**
