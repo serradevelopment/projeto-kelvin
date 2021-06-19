@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Estagiario;
+namespace App\Http\Controllers\Empresa;
 
 use App\Http\Controllers\Controller;
 use App\Models\Estagio;
@@ -11,11 +11,13 @@ class EstagiosController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function index()
     {
-        return view('estagiarios.estagios.index');
+        return view('empresas.estagios.index',[
+            'estagios'  =>  auth()->guard('empresa')->user()->estagios
+        ]);
     }
 
     /**
@@ -43,11 +45,13 @@ class EstagiosController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Estagio  $estagio
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function show(Estagio $estagio)
     {
-        //
+        return view('empresas.estagios.show',[
+            'estagio'   =>  $estagio
+        ]);
     }
 
     /**

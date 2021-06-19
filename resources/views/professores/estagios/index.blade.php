@@ -1,118 +1,94 @@
 @extends('professores.layouts.app')
 
 @section('content')
-    <div class="wrapper">
-
-        <!-- /.navbar -->
-
-        <!-- Main Sidebar Container -->
-
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1>Projects</h1>
-                        </div>
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Estágios</h1>
                     </div>
-                </div><!-- /.container-fluid -->
-            </section>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
 
-            <!-- Main content -->
-            <section class="content" style="max-width: 1500px;">
+        <!-- Main content -->
+        <section class="content" style="max-width: 1500px;">
 
-                <!-- Default box -->
-                <div class="card">
-                    <div class="card-body p-0">
-                        <table class="table table-striped projects">
-                            <thead>
-                            <tr>
-                                <th style="width: 1%">
-                                    #
-                                </th>
-                                <th style="width: 40%">
-                                    Estagiario
-                                </th>
-                                <th>
-                                    Horas Restantes
-                                </th>
-                                <th style="width: 20%" class="text-center">
-                                    Status
-                                </th>
-                                <th style="width: 20%">
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
+            <!-- Default box -->
+            <div class="card">
+                <div class="card-body p-0">
+                    <table class="table table-striped projects">
+                        <thead>
+
+                        <tr>
+                            <th style="width: 1%">
+                                #
+                            </th>
+                            <th style="width: 40%">
+                                Estagiario
+                            </th>
+                            <th>
+                                Horas Restantes
+                            </th>
+                            <th style="width: 20%" class="text-center">
+                                Status
+                            </th>
+                            <th style="width: 20%">
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($estagios as $estagio)
                             <tr>
                                 <td>
-                                    #
+                                    {{$estagio->id}}
                                 </td>
                                 <td>
                                     <a>
-                                        Vinicius
+                                        {{$estagio->estagiario->nome}}
                                     </a>
                                     <br/>
                                     <small>
-                                        Criado em 16/06/2021
+                                        Criado em {{date('d/m/Y',strtotime($estagio->created_at))}}
                                     </small>
                                 </td>
                                 <td class="project_progress">
                                     <div class="progress progress-sm">
-                                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%">
+                                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: {{($estagio->horas_concluidas/$estagio->qtd_horas)*100}}%">
                                         </div>
                                     </div>
                                     <small>
-                                        33 Horas
+                                        {{$estagio->qtd_horas - $estagio->horas_concluidas}} horas
                                     </small>
                                 </td>
                                 <td class="project-state">
-                                    <span class="badge badge-success">Success</span>
+                                    {!! $estagio->status_label !!}
+
                                 </td>
                                 <td class="project-actions text-right">
-                                    <a class="btn btn-primary btn-sm" href="tarefas">
+                                    <a class="btn btn-primary btn-sm" href="{{route('professor.estagios.tarefas.index',$estagio)}}">
                                         <i class="fas fa-folder">
                                         </i>
                                         Tarefas
                                     </a>
-                                    <a class="btn btn-info btn-sm" href="/detalhes-do-estagio">
+                                    <a class="btn btn-info btn-sm" href="{{route('professor.estagios.show',$estagio)}}">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         Detalhes
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="#">
-                                        <i class="fas fa-trash">
-                                        </i>
-                                        Deletar
-                                    </a>
                                 </td>
                             </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- /.card-body -->
+                        @endforeach
+                        </tbody>
+                    </table>
                 </div>
-                <!-- /.card -->
-
-            </section>
-            <!-- /.content -->
-        </div>
-        <!-- /.content-wrapper -->
-
-        <footer class="main-footer">
-            <div class="float-right d-none d-sm-block">
-                <b>Version</b> 3.1.0
+                <!-- /.card-body -->
             </div>
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-        </footer>
+            <!-- /.card -->
 
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-        <!-- /.control-sidebar -->
+        </section>
+        <!-- /.content -->
     </div>
 @endsection
-

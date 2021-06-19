@@ -44,7 +44,13 @@ Route::post('/estagiario/register','Estagiario\Auth\LoginController@register')->
 
 Route::middleware('estagiarios')->namespace('Estagiario')->prefix('estagiario')->group(function(){
     Route::get('/', 'HomeController@home')->name('estagiario.home');
-    Route::get('/estagios', 'EstagiosController@index')->name('estagiario.estagios.index');
+    Route::get('/estagios', 'EstagiosController@index')->name('estagiarios.estagios.index');
+    Route::put('/estagios/{estagio}/tarefas/{tarefa}','TarefasController@update' )->name('estagiarios.estagios.tarefas.update');
+
+    Route::get('/estagios/{estagio}','EstagiosController@show' )->name('estagiarios.estagios.show');
+    Route::get('/estagios/{estagio}/tarefas/create','TarefasController@create' )->name('estagiarios.estagios.tarefas.create');
+    Route::get('/estagios/{estagio}/tarefas/','TarefasController@index' )->name('estagiarios.estagios.tarefas.index');
+
 });
 
 //EMPRESA
@@ -54,6 +60,11 @@ Route::post('/empresa/login','Empresa\Auth\LoginController@login')->name('empres
 Route::middleware('empresas')->namespace('Empresa')->prefix('empresa')->group(function(){
     Route::get('/', 'HomeController@home')->name('empresa.home');
     Route::get('/estagios', 'EstagiosController@index')->name('empresa.estagios.index');
+    Route::get('/estagios/{estagio}','EstagiosController@show' )->name('empresa.estagios.show');
+    Route::put('/estagios/{estagio}/tarefas/{tarefa}','TarefasController@update' )->name('empresa.estagios.tarefas.update');
+
+    Route::get('/estagios/{estagio}/tarefas/create','TarefasController@create' )->name('empresa.estagios.tarefas.create');
+    Route::get('/estagios/{estagio}/tarefas/','TarefasController@index' )->name('empresa.estagios.tarefas.index');
 });
 
 //PROFESSOR
@@ -65,6 +76,10 @@ Route::post('/professor/register','Professor\Auth\LoginController@register')->na
 Route::middleware('professores')->namespace('Professor')->prefix('professor')->group(function(){
     Route::get('/', 'HomeController@home')->name('professor.home');
     Route::get('/estagios', 'EstagiosController@index')->name('professor.estagios.index');
+    Route::get('/estagios/{estagio}','EstagiosController@show' )->name('professor.estagios.show');
+    Route::get('/estagios/{estagio}/tarefas/create','TarefasController@create' )->name('professor.estagios.tarefas.create');
+    Route::get('/estagios/{estagio}/tarefas/','TarefasController@index' )->name('professor.estagios.tarefas.index');
+    Route::put('/estagios/{estagio}/tarefas/{tarefa}','TarefasController@update' )->name('professor.estagios.tarefas.update');
 });
 
 

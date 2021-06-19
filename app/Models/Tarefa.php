@@ -15,4 +15,25 @@ class Tarefa extends Model
     public function estagio(){
         return $this->belongsTo(Estagio::class);
     }
+
+    public function getEmpresaOkLabelAttribute(){
+        if($this->empresa_ok ===1){
+            return '<span class="badge badge-success">Verificado</span>';
+        }
+        return '<span class="badge badge-danger">Não Verificado</span>';
+    }
+
+    public function getProfessorOkLabelAttribute(){
+        if($this->professor_ok ===1){
+            return '<span class="badge badge-success">Verificado</span>';
+        }
+        return '<span class="badge badge-danger">Não Verificado</span>';
+    }
+
+    public function getEstagiarioOkLabelAttribute(){
+        if($this->estagiario_ok ===1){
+            return '<span class="badge badge-success">Verificado</span>';
+        }
+        return '<span class="badge badge-danger">Não Verificado</span>';
+    }
 }

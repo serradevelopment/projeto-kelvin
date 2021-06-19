@@ -27,8 +27,9 @@ class Estagio extends Model
         return $this->hasMany(Tarefa::class);
     }
 
+
     public function getHorasConcluidasAttribute(){
-        $horas_tarefas = $this->tarefas()->sum('qtd_horas');
+        $horas_tarefas = $this->tarefas()->where('empresa_ok',1)->where('professor_ok',1)->where('estagiario_ok',1)->sum('qtd_horas');
         return $horas_tarefas;
     }
 

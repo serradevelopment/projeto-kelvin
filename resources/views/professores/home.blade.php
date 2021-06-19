@@ -23,7 +23,7 @@
                         <!-- small box -->
                         <div class="small-box bg-warning">
                             <div class="inner" style="padding: 25px!important;">
-                                <h3>44</h3>
+                                <h3>{{count(auth()->guard('professor')->user() ->tarefas_pendentes) }}</h3>
 
                                 <p>Tarefas aguardando verificação</p>
                             </div>

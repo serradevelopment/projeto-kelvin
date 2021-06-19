@@ -11,11 +11,13 @@ class EstagiosController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function index()
     {
-        return view('estagiarios.estagios.index');
+        return view('estagiarios.estagios.index',[
+            'estagios'  =>  auth()->guard('estagiario')->user()->estagios
+        ]);
     }
 
     /**
@@ -47,7 +49,9 @@ class EstagiosController extends Controller
      */
     public function show(Estagio $estagio)
     {
-        //
+        return view('estagiarios.estagios.show',[
+            'estagio'   =>  $estagio
+        ]);
     }
 
     /**

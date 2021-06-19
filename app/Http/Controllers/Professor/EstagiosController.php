@@ -15,7 +15,9 @@ class EstagiosController extends Controller
      */
     public function index()
     {
-        return view('professores.estagios.index');
+        return view('professores.estagios.index',[
+            'estagios'  =>  auth()->guard('professor')->user()->estagios
+        ]);
     }
 
     /**
@@ -47,7 +49,9 @@ class EstagiosController extends Controller
      */
     public function show(Estagio $estagio)
     {
-        //
+        return view('professores.estagios.show',[
+            'estagio'  =>  $estagio
+        ]);
     }
 
     /**
